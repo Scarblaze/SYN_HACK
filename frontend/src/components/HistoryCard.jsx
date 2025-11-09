@@ -38,7 +38,7 @@ const HistoryCard = () => {
         const fetchHistory = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const res = await axios.get("http://localhost:5000/api/complaints/history", {
+                const res = await axios.get("https://syn-hack.onrender.com/api/complaints/history", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setHistory(Array.isArray(res.data) ? res.data : []);
@@ -56,7 +56,7 @@ const HistoryCard = () => {
             await Promise.all(
                 resolved.map(async (item) => {
                     try {
-                        const res = await axios.get(`http://localhost:5000/api/complaints/${item._id}/feedback`, {
+                        const res = await axios.get(`https://syn-hack.onrender.com/api/complaints/${item._id}/feedback`, {
                             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                         });
                         if (Array.isArray(res.data) && res.data.length > 0) {
@@ -75,7 +75,7 @@ const HistoryCard = () => {
         setSubmitting(s => ({ ...s, [complaintId]: true }));
         try {
             await axios.post(
-                `http://localhost:5000/api/complaints/${complaintId}/feedback`,
+                `https://syn-hack.onrender.com/api/complaints/${complaintId}/feedback`,
                 { rating: rating[complaintId], comment: comment[complaintId] },
                 { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
             );

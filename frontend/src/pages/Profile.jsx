@@ -150,7 +150,7 @@ const Profile = () => {
                     >
                         {user?.profilePic ? (
                             <motion.img
-                                src={user.profilePic && !user.profilePic.startsWith('http') ? `http://localhost:5000/uploads/${user.profilePic}` : user.profilePic}
+                                src={user.profilePic && !user.profilePic.startsWith('http') ? `https://syn-hack.onrender.com/uploads/${user.profilePic}` : user.profilePic}
                                 alt="Profile"
                                 className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-indigo-200"
                                 initial={{ opacity: 0, scale: 0.9 }}

@@ -102,7 +102,7 @@ const ComplaintForm = () => {
         });
 
         try {
-            await axios.post("http://localhost:5000/api/complaints/submit", formData, {
+            await axios.post("https://syn-hack.onrender.com/api/complaints/submit", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                     Authorization: `Bearer ${token}`,

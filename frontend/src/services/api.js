@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:5000/api",  // Ensure backend is running on this port
+    baseURL: "https://syn-hack.onrender.com/api",  // Ensure backend is running on this port
     headers: { "Content-Type": "application/json" },
     withCredentials: true,  // ✅ Sends cookies (for JWT authentication)
 });

@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://syn-hack.onrender.com/api";
 
 const Sidebar = ({ setActiveSection, activeSection }) => {
     const [user, setUser] = useState(null);

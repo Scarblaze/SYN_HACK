@@ -13,7 +13,7 @@ const ComplaintDetails = () => {
     const [feedbacks, setFeedbacks] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/complaints/${complaintId}`, {
+        axios.get(`https://syn-hack.onrender.com/api/complaints/${complaintId}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         })
             .then(response => {
@@ -22,7 +22,7 @@ const ComplaintDetails = () => {
             })
             .catch(() => setLoading(false));
 
-        axios.get(`http://localhost:5000/api/complaints/${complaintId}/feedback`, {
+        axios.get(`https://syn-hack.onrender.com/api/complaints/${complaintId}/feedback`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         })
             .then(res => {
